@@ -21,8 +21,8 @@ class main{
 
 			for(int j = 0, h; j < A - 1; j++)
 			{ //連續數字之差的絕對值
-				h = Math.abs(n[j] - n[j+1]);
-				if(h > A-1)
+				h = Math.abs(n[j] - n[j + 1]);
+				if(h > A - 1)
 					continue;		
 				m[h] = 0;
 			}
