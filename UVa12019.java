@@ -2,7 +2,7 @@ import java.lang.*;
 import java.util.*;
 
 class main{
-	public static void main(String args[])
+	public static void Main(String args[])
 	{
 		Scanner input = new Scanner(System.in);
 		String[] data = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
