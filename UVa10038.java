@@ -10,7 +10,7 @@ class main{
 		{
 			int A = input.nextInt();
 			boolean flag = false;
-			int n[] = new int[100];
+			int n[] = new int[3000];
 			int m[] = new int[A];
 			
 			for(int j = 1; j < A; j++)
@@ -20,7 +20,7 @@ class main{
 				n[i] = input.nextInt();
 
 			for(int j = 0, h; j < A - 1; j++)
-			{
+			{ //連續數字之差的絕對值
 				h = Math.abs(n[j] - n[j+1]);
 				if(h > A-1)
 					continue;		
