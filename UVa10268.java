@@ -1,5 +1,5 @@
-//不知道為什麼UVa一直送RE...
-//CodingFrenzy都可以的
+//UVa RE...
+//CodingFrenzy v
 //算一元多次方程式的導數
 
 import java.lang.*;
