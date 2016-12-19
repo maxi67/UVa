@@ -14,14 +14,14 @@ class main{
 		while(input.hasNext())
 		{
 			S = input.nextLine();
-			for(int i = 0;i < S.length();i++)
+			for(int i = 0; i < S.length(); i++)
 			{
 				sum++;
 				count[S.charAt(i)]++;
 			}
 			
-			for(int k = 1;k<=sum;k++)
-				for(int j = 128;j >= 0;j--)
+			for(int k = 1; k <= sum; k++)
+				for(int j = 128; j >= 0; j--)
 				{
 					if(k == count[j])
 						{
@@ -29,7 +29,7 @@ class main{
 							count[j] = 0;
 						}
 				}
-			if(input.hasNext())
+			if(input.hasNext()) //每筆測資之間要空行，但最後一筆後不空
 				System.out.println();
 		}
 	}
