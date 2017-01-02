@@ -1,4 +1,4 @@
-# UVa for java or c++  
+# UVa for java or C++(目前為Java)  
 ## Java:  
 UVa online judge 要用class Main  
 CodingFrenzy 則是用class main  
