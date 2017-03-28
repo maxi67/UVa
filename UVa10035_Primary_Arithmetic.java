@@ -23,7 +23,7 @@ class main{
 				if(A%10 + B%10 + carry >= 10)
 				{
 				  times++;
-          carry = 1;
+				  carry = 1;
 				}
 				else
 					carry = 0;
