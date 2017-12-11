@@ -22,12 +22,12 @@ public class Main {
 					if (t % 2 == 1)
 						Hex++;
 					
-					if(t == 1)
+					if (t == 1)
 						break;
 					t /= 2;
 				}
     			
-				if(M < 10)
+				if (M < 10)
 					break; 
 				M /= 10;
 			}
