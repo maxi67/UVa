@@ -2,7 +2,6 @@
 using namespace std;
 
 int main(){
-
 	int a, b, c, bb, he;
 	int sum, sum2;
 	
