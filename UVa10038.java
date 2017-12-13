@@ -18,7 +18,7 @@ class Main{
 			for (int i = 0; i < A; i++)
 				n[i] = input.nextInt();
 
-			for(int j = 0, h; j < A - 1; j++) { //連續數字之差的絕對值
+			for (int j = 0, h; j < A - 1; j++) { //連續數字之差的絕對值
 				h = Math.abs(n[j] - n[j + 1]);
 				if (h > A - 1)
 					continue;		
