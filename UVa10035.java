@@ -3,9 +3,8 @@ import java.lang.*;
 import java.util.*;
 
 class Main{
-	
     public static void main(String args[]){
-	    
+
         Scanner input = new Scanner(System.in);
         int A, B;
         int carry = 0, times = 0;
@@ -33,7 +32,7 @@ class Main{
 		
 	    if (times == 0)
 	        System.out.println("No carry operation.");
-	    else{   
+	    else{
 		if (times == 1)
 		    System.out.println("1 carry operation.");
 		else
