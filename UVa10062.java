@@ -27,20 +27,20 @@ public class Main {
 				count[s.charAt(i)][1]++;
 			
 			Arrays.sort(count, new Comparator<int[]>() {
-	            @Override
-	            public int compare(int[] x, int[] y) {
-	                if(x[1] > y[1]){
-	                    return 1;
-	                } else if (x[1] < y[1]){
-	                    return -1;
-	                } else {
-	                	if (x[0] < y[0])
-		                    return 1;
-		                else
-		                	return -1;   
-	                }
-	            }
-	        });
+				@Override
+				public int compare(int[] x, int[] y) {
+					if(x[1] > y[1]){
+						return 1;
+					} else if (x[1] < y[1]){
+						return -1;
+					} else {
+						if (x[0] < y[0])
+							return 1;
+						else
+							return -1;   
+					}
+				}
+			});
 			
 			for (int i = 0; i < 300; i++) {
 				if (count[i][1] != 0)
