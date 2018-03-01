@@ -1,36 +1,54 @@
 import java.util.*;
-import java.lang.*;
 
-class main{
-	
-	public static void main(String args[]){
-	
-		Scanner input = new Scanner(System.in);
+public class Main {
+
+	public static void main(String args[]) {
 		
-		String S = "";
-		int[] count = new int[130];
-		int sum = 0;
+		Scanner sc = new Scanner(System.in);
+		int count[][] = new int[300][2];
 		
-		while(input.hasNext())
-		{
-			S = input.nextLine();
-			for(int i = 0; i < S.length(); i++)
-			{
-				sum++;
-				count[S.charAt(i)]++;
+		for (int i = 0; i < 300; i++) {
+			count[i][0] = i;
+		}
+		
+		boolean first = true;
+		
+		while (sc.hasNext()) {
+			String s = sc.nextLine();
+			
+			if (!first) {
+				for (int i = 0; i < 300; i++) {
+					count[i][0] = i;
+					count[i][1] = 0;
+				}
+				System.out.println();
 			}
 			
-			for(int k = 1; k <= sum; k++)
-				for(int j = 128; j >= 0; j--)
-				{
-					if(k == count[j])
-						{
-							System.out.println(j + " " + count[j]);
-							count[j] = 0;
-						}
-				}
-			if(input.hasNext()) //每筆測資之間要空行，但最後一筆後不空
-				System.out.println();
+			for (int i = 0; i < s.length(); i++)
+				count[s.charAt(i)][1]++;
+			
+			Arrays.sort(count, new Comparator<int[]>() {
+	            @Override
+	            public int compare(int[] x, int[] y) {
+	                if(x[1] > y[1]){
+	                    return 1;
+	                } else if(x[1] < y[1]){
+	                    return -1;
+	                } else {
+	                	if(x[0] < y[0])
+		                    return 1;
+		                else
+		                	return -1;   
+	                }
+	            }
+	        });
+			
+			for (int i = 0; i < 300; i++) {
+				if (count[i][1] != 0)
+					System.out.println(count[i][0]+" "+count[i][1]);
+			}
+			
+			first = false;	
 		}
 	}
 }
