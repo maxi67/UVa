@@ -17,7 +17,7 @@ class Main{
 			//long A = sc.nextLong();
 			//long B = sc.nextLong();
 			//long ans = A>B ? A-B : B-A;
-			//System.out.println(ans+"");
+			//System.out.println(ans + "");
 		}
 	}
 }
