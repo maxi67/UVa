@@ -25,8 +25,7 @@ public class Main {
 			if ((sum1 + sum2) % 10 == 0)
 				System.out.println("Valid");
 			else
-				System.out.println("Invalid");
-				
+				System.out.println("Invalid");		
 		}
 	}
 }
