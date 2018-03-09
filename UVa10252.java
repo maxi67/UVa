@@ -16,10 +16,10 @@ class Main{
 			for (int j = 0; j < s2.length(); j++)
 				c2[s2.charAt(j)]++;
 				
-			//數量大於1，輸出較少數量那方的個數
+			//輸出較少數量那方的個數
 			for (int k = 97; k <= 122; k++)
 				for(int num = 0; num < Math.min(c1[k], c2[k]); num++)
-					System.out.print((char)k);		
+					System.out.print((char)k);
 				
 			System.out.println();
 		}
