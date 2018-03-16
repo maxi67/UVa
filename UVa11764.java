@@ -20,7 +20,7 @@ public class UVa11764 {
 				if (current < arr[j])
 					h++;
 				else if(current > arr[j])
-				l++;
+					l++;
 				current = arr[j];
 			}
 			System.out.println("Case " + i + ": " + h + " " + l);
