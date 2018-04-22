@@ -1,35 +1,27 @@
 import java.util.*;
-import java.lang.*;
 
-class Main{
-	public static void main(String args[]){
-		
-		Scanner input = new Scanner(System.in);
-		
-		while (input.hasNextInt()) {
-			int A = input.nextInt();
-			boolean flag = false;
-			int n[] = new int[3000];
-			int m[] = new int[A];
+public class Main {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNext()) {
 			
-			for (int j = 1; j < A; j++)
-				m[j] = 1;			
+			int n = sc.nextInt();
+			boolean check[] = new boolean[3001];
+			int num[] = new int[n];
+			boolean jolly = true;
 			
-			for (int i = 0; i < A; i++)
-				n[i] = input.nextInt();
-
-			for (int j = 0, h; j < A - 1; j++) { //連續數字之差的絕對值
-				h = Math.abs(n[j] - n[j + 1]);
-				if (h > A - 1)
-					continue;		
-				m[h] = 0;
+			num[0] = sc.nextInt();
+			for (int i = 1; i < n; i++) {
+				num[i] = sc.nextInt();
+				check[Math.abs(num[i] - num[i-1])] = true;
 			}
 			
-			for (int j = 1; j < A; j++)
-				if (m[j] == 1)
-					flag = true;
+			for (int i = 1; i < n; i++) {
+				if (!check[i])
+					jolly = false;
+			}
 			
-			if (!flag)
+			if (jolly)
 				System.out.println("Jolly");
 			else
 				System.out.println("Not jolly");
