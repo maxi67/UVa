@@ -1,28 +1,23 @@
 import java.util.*;
-import java.lang.*;
 
-class main{
-	public static void main(String args[]){
+class Main {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
 		
-		Scanner input = new Scanner(System.in);
+		String L = "ZXCVBNM,./ASDFGHJKL;\'QWERTYUIOP[]\\`1234567890-=";
 		
-		String S;
-		String Str="`1234567890-=QWERTYUIOP[]\\ASDFGHJKL;'ZXCVBNM,./";
-		
-		while(input.hasNext())
-		{
-			S = input.nextLine();
-			for(int i = 0 ; i < S.length() ; i++ )
-			{
-				if(S.charAt(i) == ' ')
-					System.out.print(" ");
-					
-				for(int j = 0; j < Str.length(); j++)
-					if(S.charAt(i) == Str.charAt(j))
-						System.out.print( Str.charAt(j-1));
+		while (sc.hasNext()) {
+			String s = sc.nextLine();
+			for (int i = 0; i < s.length(); i++) {
+				switch (s.charAt(i)) {
+					case ' ':
+						System.out.print(" ");
+						continue;
+					default:
+						System.out.print(L.charAt(L.indexOf(s.charAt(i))-1));
+				}
 			}
 			System.out.println();
-
 		}
 	}
 }
