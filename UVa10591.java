@@ -1,8 +1,6 @@
-package uva10000_10999;
-
 import java.util.*;
 
-public class UVa10591 {
+public class Main {
 	public static void main(String args[]) {
 
 		Scanner sc = new Scanner(System.in);
