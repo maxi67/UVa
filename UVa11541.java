@@ -8,11 +8,11 @@ public class Main {
 		for (int i = 1; i <= t; i++) {
 			System.out.print("Case " + i + ": ");
 			
-			String s = sc.nextLine();
 			int index = 0;
-			char c; 
+			char c;
+			String s = sc.nextLine();
+			 
 			while (index != s.length()) {
-				
 				c = s.charAt(index++);
 				int begin = index;
 				while ((s.charAt(index) >= 48) && (s.charAt(index) <= 57)) {
@@ -22,9 +22,8 @@ public class Main {
 				
 				for (int j = 1; j <= Integer.valueOf(s.substring(begin, index)); j++)
 					System.out.print(c);
-				
 			}
 			System.out.println();
-		}		
+		}
 	}
-} 
+}
