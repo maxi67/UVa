@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class M {
+public class Main {
 
 	public static String bfs (HashMap<String, ArrayList<String>> list, String s, String d) {
 		Queue<String> queue = new ArrayDeque<>();
@@ -55,8 +55,8 @@ public class M {
 			for (int i = 0; i < m; i++) {
 				
 				st = sc.nextLine().split(" ");
-				String d1=st[0];
-				String d2=st[1];
+				String d1 = st[0];
+				String d2 = st[1];
 				
 				//Build path
 				if (!list.containsKey(d1)) 
