@@ -72,7 +72,7 @@ public class Main {
 				System.out.println();
 			
 			for (int i = 0; i < n; i++) {
-				st=sc.nextLine().split(" ");
+				st = sc.nextLine().split(" ");
 				System.out.println(bfs(list, st[0], st[1]));
 			}
 		}
