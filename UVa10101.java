@@ -1,8 +1,6 @@
-package uva10000_10999;
-
 import java.util.*;
 
-public class UVa10101 {
+public class Main {
 	public static void calculate(long num) {
 		if (num == 0) 
 			return;
