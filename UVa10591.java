@@ -23,10 +23,10 @@ public class Main {
 					N1 /= 10;
 				}
 
-				if (set.contains(sum)){
-			          happy = false;
-			          break;
-			    }		
+				if (set.contains(sum)) {
+					happy = false;
+					break;
+				}		
 				set.add(sum);
 			}
 			
