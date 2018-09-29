@@ -24,7 +24,7 @@ public class Main {
 				break;
 			
 			Arrays.fill(visit, false);
-			Arrays.fill(times, 1);
+			Arrays.fill(times, 0);
 			for (int i = 0; i < 101; i++)
 				Arrays.fill(map[i], false);
 			
