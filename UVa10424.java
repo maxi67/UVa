@@ -35,7 +35,6 @@ public class Main {
 			for (int i = 0; i < s2.length(); i++) 
 				if (s2.charAt(i) >= 'a' && s2.charAt(i) <= 'z')
 					v2 += (s2.charAt(i) - 'a' + 1);
-
 			
 			while (v2 >= 10) {
 				v2 = getValue(v2);
