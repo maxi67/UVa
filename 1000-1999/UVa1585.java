@@ -7,7 +7,7 @@ public class Main {
 		
 		while (T-- > 0) {
 			int score = 0;
-			String s= sc.nextLine();
+			String s = sc.nextLine();
 			for (int i = 0, j = 1; i < s.length(); i++) {
 				if (s.charAt(i) == 'O') 
 					score += (j++);
