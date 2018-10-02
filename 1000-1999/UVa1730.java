@@ -13,12 +13,12 @@ public class Main {
 			long count = 0;
 			
 			while (L <= N) {
-	            times = N / L;
-	            R = N / times;
-	            ans += times * ((L + R) * (R - L + 1) / 2);
-	            L = R + 1;
-	            count++;
-	        }
+				times = N / L;
+				R = N / times;
+				ans += times * ((L + R) * (R - L + 1) / 2);
+				L = R + 1;
+				count++;
+			}
 			System.out.println(ans - 1);
 		}
 	}
