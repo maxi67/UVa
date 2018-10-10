@@ -1,18 +1,15 @@
 import java.util.*;
 
 public class Main {
-
 	public static void main(String args[]) {
-		
 		Scanner sc = new Scanner(System.in);
 		
 		int n, mid, mid2, n_mid, count;
 		while (sc.hasNext()) {
 			n = sc.nextInt();
 			int[] num = new int[n];
-			for (int i = 0; i < n; i++) {
+			for (int i = 0; i < n; i++) 
 				num[i] = sc.nextInt();
-			}
 			
 			Arrays.sort(num);
 			
@@ -29,6 +26,5 @@ public class Main {
 			
 			System.out.println(mid + " " + count + " " + n_mid);	
 		}
-		sc.close();
 	}
 }
