@@ -6,7 +6,7 @@ public class Main {
 		int times = sc.nextInt();
 		int A, B, flag = 0;
 		
-		//建費氏數列表		
+		//建費氏數列表
 		int arr[] = new int[50];
 		arr[0] = 1;
 		arr[1] = 2;
@@ -16,20 +16,21 @@ public class Main {
 		while (times-- > 0) {
 			flag = 0;
 			A = sc.nextInt();
-			B = A;
-			StringBuilder sb = new StringBuilder(B + " = ");
-					
-			for (int i = 42; i >= 0; i--) {
-				if (B >= arr[i]) {
-					B -= arr[i];
+			StringBuilder sb = new StringBuilder(A + " = ");
+			
+			int i = 42;
+			while (A < arr[i])
+				i--;
+	
+			while (i >= 0) {
+				if (A >= arr[i]) {
+					A -= arr[i];
 					sb.append("1");
-					flag = 1;
 				}
 
-				else {
-					if (flag == 1)
-						sb.append("0");
-				}	
+				else 
+					sb.append("0");
+				i--;
 			}
 			
 			sb.append(" (fib)");
