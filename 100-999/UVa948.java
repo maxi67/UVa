@@ -4,9 +4,9 @@ public class Main {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		int times = sc.nextInt();
-		int A, B, flag = 0;
+		int A = 0;
 		
-		//建費氏數列表
+		//建費氏數列表		
 		int arr[] = new int[50];
 		arr[0] = 1;
 		arr[1] = 2;
@@ -14,7 +14,6 @@ public class Main {
 			arr[i] = arr[i - 1] + arr[i - 2];
 
 		while (times-- > 0) {
-			flag = 0;
 			A = sc.nextInt();
 			StringBuilder sb = new StringBuilder(A + " = ");
 			
