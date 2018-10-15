@@ -1,12 +1,10 @@
 import java.util.*;
-import java.lang.*;
 
-class Main{
+public class Main {
 	public static void main(String args[]) {
-		Scanner input = new Scanner(System.in);
-		int times = input.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int times = sc.nextInt();
 		int A, B, flag = 0;
-		String bin = "";
 		
 		//建費氏數列表		
 		int arr[] = new int[50];
@@ -17,26 +15,25 @@ class Main{
 
 		while (times-- > 0) {
 			flag = 0;
-			A = input.nextInt();
+			A = sc.nextInt();
 			B = A;
-			bin = B + " = ";
-			
-			for (int i = 42; i >= 0; i--) {
-				if (B >= arr[i])
-					{
-						B -= arr[i];
-						bin = bin.concat("1");
-						flag = 1;
-					}
+			StringBuilder sb = new StringBuilder(B + " = ");
 					
-					else
-					{
-						if (flag == 1)
-							bin = bin.concat("0");
-					}	
+			for (int i = 42; i >= 0; i--) {
+				if (B >= arr[i]) {
+					B -= arr[i];
+					sb.append("1");
+					flag = 1;
+				}
+
+				else {
+					if (flag == 1)
+						sb.append("0");
+				}	
 			}
-			bin = bin.concat("(fib)");
-			System.out.println(bin);
+			
+			sb.append(" (fib)");
+			System.out.println(sb.toString());
 		}
 	}
 }
