@@ -11,23 +11,22 @@ public class Main {
 			boolean left[] = new boolean[N];
 			String list[] = new String[N];
 			int index = -1;
-			for(int n = 0; n < N; n++) {
+			for (int n = 0; n < N; n++) {
 				String card = sc.next();
 				int order = sc.next().length();
 				for (int i = 0; i < order; i++) {
 					do {
 						index = (index == N-1) ? 0 : (index + 1);
-					}while (left[index]);
+					} while (left[index]);
 				}
 				left[index] = true;
 				list[index] = card;
 			}
       
 			System.out.print(list[0]);
-			for(int s = 1; s < N; s++)
+			for (int s = 1; s < N; s++)
 				System.out.print(" " + list[s]);
 			System.out.println();
-		}
-		
+		}	
 	}
 }
