@@ -33,7 +33,7 @@ public class Main {
 					}
 
 					if (k[13] == 1) 
-	                	break;
+						break;
 				}
 				
 				for (int i = 1; i <= N; i++) {
@@ -47,7 +47,7 @@ public class Main {
 					System.out.printf("%d\n", m);
 					break;
 				}
-      }
-    }
+			}
+		}
 	}
 }
