@@ -1,30 +1,22 @@
-//UVa RE...
-//CodingFrenzy v
-//算一元多次方程式的導數
-
-import java.lang.*;
-import java.lang.*;
 import java.util.*;
-import java.math.*;
 
-class Main{
-	public static void main(String args[])
-	{
-		Scanner input = new Scanner(System.in);
-		
-		while(input.hasNextLine()){
+public class Main {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNext()) {
+			long x = Integer.valueOf(sc.nextLine());
+			String s[] = sc.nextLine().split("\\s+");
 			
-			int n = Integer.valueOf(input.nextLine());
-			String s = input.nextLine();
-			String[] a = s.split(" ");
-			
-			int deg = a.length - 1;
-			int sum = 0;
-
-			for(int i = deg-1, x = 1, j = 1; j <= deg; i--, j++, x *= n)		
-				sum += x * Integer.valueOf(a[i]) * j;
-			
-			System.out.println(sum);
+			long sum = 0;
+			if (s.length == 1)
+				System.out.println(0);
+			else {
+				long pow = 1L;
+				for (int i = 1; i < s.length; i++, pow *= x) {
+					sum += i*pow*Integer.valueOf(s[s.length-i-1]);
+				}
+				System.out.println(sum);
+			}	
 		}
 	}
 }
