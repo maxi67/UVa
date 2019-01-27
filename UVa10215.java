@@ -1,10 +1,12 @@
 import java.util.*;
 
-class Main{
-	public static void main(String args[]){
+public class Main {
+	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
-		
-		while (sc.hasNextDouble()){
+		while (sc.hasNext()){
+			double L = sc.nextDouble();
+			double W = sc.nextDouble();
+			
 			double a = 12;
 			double b = -4*(L + W);
 			double c = L * W;
