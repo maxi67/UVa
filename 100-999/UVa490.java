@@ -18,8 +18,7 @@ public class Main {
 		for (int j = 0; j < max; j++) {
 			for (int k = lines - 1; k >= 0; k--) {
 				if (data[k][j] == '\0') { 
-						if (k != 0)
-							System.out.print(" ");
+					System.out.print(" ");
 				} else
 					System.out.print(data[k][j]);
 			}
